@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div .main-grid {
+  display: grid;
+  grid-template-areas:
+    'head'
+    'main'
+    'footer';
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr min(1200px, 90%) 1fr;
+}
+
+.main-grid > * {
+  grid-column: 2;
+}
+
+header {
+  grid-area: head;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  height: 100px;
+  grid-area: footer;
+}
